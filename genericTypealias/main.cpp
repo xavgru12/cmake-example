@@ -1,3 +1,5 @@
+#include <vector>
+
 #include "GenericTypeParamType.h"
 
 int main() {
@@ -7,5 +9,10 @@ int main() {
     std::cout << "object1 depth: " << object1.getDepth() << std::endl;
     std::cout << "object2 depth: " << object2.getDepth() << std::endl;
 
+    std::vector<GenericTypeParamType> types;
+    types.push_back(object1);
+    types.push_back(object2);
+
     return 0;
 }
+
