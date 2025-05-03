@@ -14,20 +14,9 @@ int main() {
     types.push_back(&object2);
 
     std::vector<GenericTypeParamType*> mutableNominalParams(
-    types.begin(), types.end());
+    types.rbegin(), types.rend());
 
     unsigned maxDepth = 1;
-
-
-    for (auto parameter = mutableNominalParams.rbegin();
-         parameter != mutableNominalParams.rend(); ) {
-      if ((*parameter)->getDepth() == maxDepth) {
-        auto it_to_erase = std::next(parameter).base(); // base() gives forward iterator
-        parameter = std::reverse_iterator(mutableNominalParams.erase(it_to_erase));
-      } else {
-        ++parameter;
-      }
-    }
 
     return 0;
 }
