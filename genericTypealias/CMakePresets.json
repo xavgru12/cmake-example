@@ -1,0 +1,14 @@
+{
+  "configurePresets": [
+    {
+      "name": "clang",
+      "displayName": "Clang Build",
+      "description": "Use Clang and Clang++ as compilers",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang++"
+      }
+    }
+  ]
+}
